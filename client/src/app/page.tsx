@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 
 export default function Home() {
@@ -22,8 +23,15 @@ export default function Home() {
       </div>
 
 
-      <h3 className="text-3xl text-primary dark:invert">Next js</h3>
 
+   <Image
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          src="/next.svg"
+          alt="Next.js Logo"
+          width={180}
+          height={37}
+          priority
+        />
       <div
         className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4
           lg:text-left gap-x-2"

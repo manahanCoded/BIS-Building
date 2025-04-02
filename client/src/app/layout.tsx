@@ -1,5 +1,6 @@
 
 
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import "./globals.css"; // Ensure global styles are imported
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
@@ -12,8 +13,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <ThemeSwitcher /> {/* Only this is client-side */}
+        <MaxWidthWrapper>
+        <ThemeSwitcher /> 
         {children}
+        </MaxWidthWrapper>
       </body>
     </html>
   );
