@@ -3,19 +3,25 @@
 import { useState, useEffect } from "react";
 
 export function useTheme() {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "zinc-light";
-    }
-    return "zinc-light";
-  });
+  const [theme, setTheme] = useState("zinc");
+  const [mode, setMode] = useState("light");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      document.documentElement.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
+      const storedTheme = localStorage.getItem("theme") || "zinc";
+      const storedMode = localStorage.getItem("mode") || "light";
+      setTheme(storedTheme);
+      setMode(storedMode);
     }
-  }, [theme]);
+  }, []);
 
-  return { theme, setTheme };
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.setAttribute("data-theme", `${theme}-${mode}`);
+      localStorage.setItem("theme", theme);
+      localStorage.setItem("mode", mode);
+    }
+  }, [theme, mode]);
+
+  return { theme, setTheme, mode, setMode };
 }

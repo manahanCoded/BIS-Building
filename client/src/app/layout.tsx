@@ -1,7 +1,6 @@
 
-
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import "./globals.css"; // Ensure global styles are imported
+import Navbar from "@/components/Navbar";
+import "./globals.css";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export const metadata = {
@@ -13,10 +12,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <MaxWidthWrapper>
+        <Navbar/>
         <ThemeSwitcher /> 
         {children}
-        </MaxWidthWrapper>
       </body>
     </html>
   );
