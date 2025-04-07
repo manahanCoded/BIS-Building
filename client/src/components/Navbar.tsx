@@ -12,11 +12,11 @@ export default function Navbar() {
 
     return (
         <section
-            className={`w-full fixed top-12 indent-0 z-50 px-3.5 md:px-20 flex items-center gap-2 dark:invert dark:drop-shadow-[0_0_0.3rem_#ffffff70] 
+            className={`w-full fixed top-12 indent-0 z-50 px-3.5 md:px-20 flex items-center gap-2 dark:invert text-primary dark:drop-shadow-[0_0_0.3rem_#ffffff70] 
                         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} 
                         transition-all duration-700 ease-out`}
         >
-            <div className='w-full flex flex-row items-center justify-between'>
+            <div className='w-full flex flex-row items-center justify-between '>
                 <Link href={"/"}>
                     <Image
                         src="/Branding_Img/BIS_Logo.png"
@@ -28,7 +28,9 @@ export default function Navbar() {
                     />
                 </Link>
                 <div className='text-sm flex flex-row justify-between items-center space-x-20 uppercase dark:invert'>
-                    <Link href={"/apartment"}>Apartments</Link>
+                    <Link 
+                    className=''
+                    href={"/apartment"}>Apartments</Link>
                     <Link href={"/apartment"}>Pricing</Link>
                     <Link href={"/apartment"}>Location</Link>
                 </div>

@@ -22,7 +22,7 @@ export default function ThemeSwitcher() {
 
 
   return (
-    <section className="absolute bottom-6 z-50">
+    <section className="fixed bottom-6 z-50">
     <div className="flex items-center gap-2 ">
       <Select value={theme} onValueChange={setTheme}>
         <SelectTrigger className="rounded-full p-2">
