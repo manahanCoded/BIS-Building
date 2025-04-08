@@ -14,7 +14,7 @@ export default function Home() {
     <main className="">
       <div className="relative  h-screen ">
         <Image
-          src="/Home_Img/Home.jpg"
+          src="/Home_Img/Home1.jpg"
           alt="Job Image"
           fill
           className="object-cover select-none z-0"
@@ -23,10 +23,8 @@ export default function Home() {
         />
         <h1 className={` items-center justify-center select-none flex h-full w-full poppins-semibold  absolute m-auto transform text-white  text-9xl z-20
           ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} 
-          transition-all duration-1800 ease-out`}
-          style={{
-            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)',
-          }}
+          transition-all duration-700 ease-out`}
+
           >
           City Living, Perfected
         </h1>
